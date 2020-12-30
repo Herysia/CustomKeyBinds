@@ -23,7 +23,7 @@ When selecting Escape keybind, the key will be set properly but it'll close the 
 ![looklikethis](Visuals/looklikethis.png)
 - **Run the game from steam**
 
-### Installation Side node
+### Installation side note
 If you want to install BepInEx by yourself, please download latest **IL2CPP_x86** bleeding edge build from [here](https://builds.bepis.io/projects/bepinex_be) and then copy the plugin dll into `Among us/BepInEx/plugins`
 Then add the files downloaded from [here](https://github.com/HerpDerpinstine/MelonLoader/blob/master/BaseLibs/UnityDependencies/2019.4.9.zip) to `BepInEx/unhollowed/base`
 
