@@ -1,7 +1,7 @@
 # CustomKeyBinds
 Among us mod that allow you to set custom keybinds for common actions through an ingame menu. (The mod must be launched even after changing the keybinds)
 
-<a href="Visuals/demo.mp4" target="_blank">
+<a href="https://youtu.be/OuZE_qXJwng" target="_blank">
   <img alt="Demo video" src="Visuals/demo.png"/>
 </a>
 
@@ -20,7 +20,7 @@ When selecting Escape keybind, the key will be set properly but it'll close the 
 - Download the [lastest release](...).
 - Extract the files into Among us game files (`steam/steamapps/common/Among us`)
 - This should look like this 
-![looklikethis](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![looklikethis](Visuals/looklikethis.png)
 - **Run the game from steam**
 
 ### Installation Side node
