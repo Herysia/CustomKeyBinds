@@ -46,8 +46,13 @@ namespace CustomKeyBinds.Components
         private void Start(OptionsMenuBehaviour optionsMenu, GameObject parent)
         {
             //Get original components
-            var oControlText = Utils.GetChildComponentByName<Component>(optionsMenu, "ControlText");
+            var oControlGroup = Utils.GetChildComponentByName<Component>(optionsMenu, "ControlGroup");
+            var oControlText = Utils.GetChildComponentByName<Component>(oControlGroup, "ControlText");
             var oIgnoreClose = Utils.GetChildComponentByName<Component>(optionsMenu, "IgnoreClose");
+            if (oIgnoreClose == null)
+            {
+                oIgnoreClose = Utils.GetChildComponentByName<Component>(optionsMenu, "CloseBackground");
+            }
 
             //Create component and add it to the parent
             _holder = new GameObject(name);
@@ -142,7 +147,7 @@ namespace CustomKeyBinds.Components
         }
 
         private void Update()
-        {
+        { 
             _textRenderer.Text = label;
         }
     }
