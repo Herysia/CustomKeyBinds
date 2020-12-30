@@ -119,6 +119,8 @@ namespace CustomKeyBinds.Tools
             var keybindsSection = _config.GetSection("keybinds") as KeybindSection;
 
             keybindsSection?.Settings.Add(new NameValueConfigurationElement(action.ToString(), code.ToString()));
+
+            _config.Save(ConfigurationSaveMode.Full);
         }
 
         private class KeybindSection : ConfigurationSection
