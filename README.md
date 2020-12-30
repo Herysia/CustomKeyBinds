@@ -13,8 +13,6 @@ This mod is using BepInEx for patching the game at runtime, it **DOES NOT** modi
 - Steam 2020.12.9s support ONLY (send me Itch obfuscated names if you want it)
 - Code with unobfuscated names is available in 2020.9.9s branch
 
-## Known issues
-When selecting Escape keybind, the key will be set properly but it'll close the settings window.
 
 ## Installation
 - Download the [lastest release](https://github.com/Herysia/CustomKeyBinds/releases/latest).
@@ -34,6 +32,9 @@ Then add the files downloaded from [here](https://github.com/HerpDerpinstine/Mel
 - Copy the dll from the output directory to `Among us/BepInEx/plugins`
 
 - /!\ If the version mismatch
+
+# Contributing
+Unless it's obfuscation related, please commit your changes into v2020.9.9s Branch (which is unobfuscated code).
 
 # Licensing
 CustomKeyBinds is licensed under the MIT License, Version 2.0. See [LICENSE](LICENSE.md) for the full License.
