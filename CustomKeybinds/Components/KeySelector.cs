@@ -14,6 +14,7 @@ namespace CustomKeyBinds.Components
         private static KeySelector _isSelecting;
         private static Component _ignoreClose;
 
+        public static bool canEscape = true;
 
         private OptionsMenuButton _button;
 
@@ -104,6 +105,9 @@ namespace CustomKeyBinds.Components
                 _isSelecting = null;
                 _ignoreClose.gameObject.SetActive(false);
                 backup?.OnMouseOut();
+                
+                if (code == KeyCode.Escape)
+                    canEscape = false;
             }
         }
 
