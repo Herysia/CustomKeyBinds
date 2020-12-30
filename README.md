@@ -17,7 +17,7 @@ This mod is using BepInEx for patching the game at runtime, it **DOES NOT** modi
 When selecting Escape keybind, the key will be set properly but it'll close the settings window.
 
 ## Installation
-- Download the [lastest release](https://github.com/Herysia/CustomKeyBinds/releases/latest).
+- Download the [lastest release](releases/latest).
 - Extract the files into Among us game files (`steam/steamapps/common/Among us`)
 - This should look like this 
 ![looklikethis](Visuals/looklikethis.png)
