@@ -43,4 +43,4 @@ Third-party libraries:
 - Unity Runtime libraries are part of Unity Software.  
 Their usage is subject to [Unity Terms of Service](https://unity3d.com/legal/terms-of-service), including [Unity Software Additional Terms](https://unity3d.com/legal/terms-of-service/software).
 
-###Discord: Herysia#4293
+### Discord: Herysia#4293
