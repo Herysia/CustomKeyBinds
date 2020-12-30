@@ -1,5 +1,7 @@
 ﻿using HarmonyLib;
 
+using VersionShower = BOCOFLHKCOJ;
+
 namespace CustomKeyBinds.Patches
 {
     internal static class VersionShowerPatches

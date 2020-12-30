@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using CustomKeyBinds.Tools;
 using UnityEngine;
 
+using OptionsMenuBehaviour = BOMIGDLINBO;
+
 namespace CustomKeyBinds.Components
 {
     public class SettingsWindow : PopUpWindow

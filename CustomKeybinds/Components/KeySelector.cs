@@ -4,6 +4,9 @@ using CustomKeyBinds.Tools;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
+using TextRenderer = AELDHKGBIFD;
+using OptionsMenuBehaviour = BOMIGDLINBO;
+
 namespace CustomKeyBinds.Components
 {
     public class KeySelector

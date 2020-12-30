@@ -2,6 +2,8 @@
 using HarmonyLib;
 using UnityEngine;
 
+using OptionsMenuBehaviour = BOMIGDLINBO;
+
 namespace CustomKeyBinds.Patches
 {
     internal static class OptionsMenuPatches

@@ -6,6 +6,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
+using TextRenderer = AELDHKGBIFD;
+using OptionsMenuBehaviour = BOMIGDLINBO;
+using PassiveButton = HHMBANDDIOA;
+
 namespace CustomKeyBinds.Components
 {
     public class PopUpWindow
@@ -59,7 +63,7 @@ namespace CustomKeyBinds.Components
 
             //clone original sub components
             _backgroundComponent = Object.Instantiate(oBackgroundComponent, holder.transform);
-            if (oCloseButton != null)
+            if(oCloseButton != null)
                 _closeButton = Object.Instantiate(oCloseButton, holder.transform);
             _controlText = Object.Instantiate(oControlText, holder.transform);
 
@@ -116,7 +120,7 @@ namespace CustomKeyBinds.Components
         public static void HudUpdate()
         {
             Windows.RemoveAll(item =>
-                item.holder == null || item._backgroundComponent == null ||
+                item.holder == null|| item._backgroundComponent == null ||
                 item._controlText == null);
             foreach (var window in Windows) window.Update();
         }

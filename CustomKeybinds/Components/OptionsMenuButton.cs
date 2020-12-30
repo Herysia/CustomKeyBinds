@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
+using PassiveButton = HHMBANDDIOA;
+using TextRenderer = AELDHKGBIFD;
+using OptionsMenuBehaviour = BOMIGDLINBO;
+
 namespace CustomKeyBinds.Components
 {
     public class OptionsMenuButton
@@ -22,7 +26,6 @@ namespace CustomKeyBinds.Components
         public Vector2 size;
         public string text;
         public TextRenderer textComponent;
-
         public OptionsMenuButton(OptionsMenuBehaviour optionsMenu, string name, string text, Action action, Vector2 pos,
             GameObject parent = null) : this(optionsMenu, name, text, action, pos, new Vector2(2.0f, 0.4f), parent)
         {

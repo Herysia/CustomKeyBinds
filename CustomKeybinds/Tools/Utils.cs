@@ -1,6 +1,9 @@
 ﻿using System.Linq;
 using UnityEngine;
 
+using DestroyableSingleton_HudManager_ = PPAEIPHJPDH<PIEFJFEOGOL>;
+using PassiveButton = HHMBANDDIOA;
+
 namespace CustomKeyBinds.Tools
 {
     public static class Utils
@@ -20,7 +23,7 @@ namespace CustomKeyBinds.Tools
 
         internal static void ToggleTab()
         {
-            var taskStuff = DestroyableSingleton<HudManager>.Instance?.TaskStuff;
+            var taskStuff = DestroyableSingleton_HudManager_.GKNNCOKCCIC?.TaskStuff;
 
             if (taskStuff == null || !taskStuff.active)
                 return;
