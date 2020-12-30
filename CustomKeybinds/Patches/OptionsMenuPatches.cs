@@ -38,6 +38,15 @@ namespace CustomKeyBinds.Patches
         [HarmonyPatch(typeof(OptionsMenuBehaviour), nameof(OptionsMenuBehaviour.Update))]
         public static class PatchOptionsMenuUpdate
         {
+            public static bool Prefix(OptionsMenuBehaviour __instance)
+            {
+                if (KeySelector.canEscape)
+                    return true;
+                if (Input.GetKeyUp(KeyCode.Escape))
+                    KeySelector.canEscape = true;
+                return false;
+            }
+            
             public static void Postfix()
             {
                 OptionsMenuButton.HudUpdate();
