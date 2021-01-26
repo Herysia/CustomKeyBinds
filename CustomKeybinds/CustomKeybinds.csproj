@@ -105,7 +105,6 @@
     <Compile Include="Components\OptionsMenuButton.cs" />
     <Compile Include="Components\SettingsWindow.cs" />
     <Compile Include="Patches\KeyboardJoystickPatches.cs" />
-    <Compile Include="Patches\VersionShowerPatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\ConfigManager.cs" />
     <Compile Include="CustomKeyBinds.cs" />
