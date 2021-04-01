@@ -2,19 +2,11 @@
 using HarmonyLib;
 using UnityEngine;
 
-using KeyboardJoystick = ADEHDODPMHJ;
-using PlayerControl = FFGALNAPKCD;
-using Minigame = ILKOLDJKPNE;
-using HudManager = PIEFJFEOGOL;
-using DestroyableSingleton_HudManager_ = PPAEIPHJPDH<PIEFJFEOGOL>;
-using MapBehaviour = CBAGIJCCEGG;
-using CustomPlayerMenu = AANMMDGMFEL;
-
 // DestroyableSingleton -> PPAEIPHJPDH;
-// DestroyableSingleton.InstanceExists -> PPAEIPHJPDH.OFGJFENAJFF
-// DestroyableSingleton.Instance -> GKNNCOKCCIC
+// DestroyableSingleton.InstanceExists -> PPAEIPHJPDH.NDBGOOFMEPL
+// DestroyableSingleton.Instance -> MHKLHAFLPJN
 // MapBehaviour.Instance.IsOpen -> CBAGIJCCEGG.Instance.GELKOGPNIBJ (/!\ it's maybe IsOpenStopped
-// PlayerControl.LocalPlayer.Data.IsImpostor -> PlayerControl.LocalPlayer.JLGGIOLCDFC.DAPKNDBLKIA
+// PlayerControl.LocalPlayer.Data.IsImpostor -> PlayerControl.LocalPlayer.FKJEJKMBKDJ.DAPKNDBLKIA
 
 
 namespace CustomKeyBinds.Patches
@@ -37,15 +29,15 @@ namespace CustomKeyBinds.Patches
                 if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(ConfigManager.keyBinds[KeyAction.Backward]))
                     del.y -= 1f;
                 del.Normalize();
-                __instance.JPPDJPKHPKP = del;
+                __instance.CPJJFPNHGII = del;
 
                 HandleHud();
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     if (Minigame.Instance)
                         Minigame.Instance.Close();
-                    else if (DestroyableSingleton_HudManager_.OFGJFENAJFF && MapBehaviour.Instance &&
-                             MapBehaviour.Instance.GELKOGPNIBJ)
+                    else if (DestroyableSingleton<HudManager>.NDBGOOFMEPL && MapBehaviour.Instance &&
+                             MapBehaviour.Instance.MLFKKIHIMAI)
                         MapBehaviour.Instance.Close();
                     else if (CustomPlayerMenu.Instance) CustomPlayerMenu.Instance.Close(true);
                 }
@@ -55,17 +47,17 @@ namespace CustomKeyBinds.Patches
 
             private static void HandleHud()
             {
-                if (!DestroyableSingleton_HudManager_.OFGJFENAJFF) return;
+                if (!DestroyableSingleton<HudManager>.NDBGOOFMEPL) return;
                 if (Input.GetKeyDown(ConfigManager.keyBinds[KeyAction.Report]))
-                    DestroyableSingleton_HudManager_.GKNNCOKCCIC.ReportButton.DoClick();
+                    DestroyableSingleton<HudManager>.MHKLHAFLPJN.ReportButton.DoClick();
                 if (Input.GetKeyDown(ConfigManager.keyBinds[KeyAction.Use]))
-                    DestroyableSingleton_HudManager_.GKNNCOKCCIC.UseButton.DoClick();
+                    DestroyableSingleton<HudManager>.MHKLHAFLPJN.UseButton.DoClick();
                 if (Input.GetKeyDown(ConfigManager.keyBinds[KeyAction.Map]))
-                    DestroyableSingleton_HudManager_.GKNNCOKCCIC.OpenMap();
+                    DestroyableSingleton<HudManager>.MHKLHAFLPJN.OpenMap();
                 if (Input.GetKeyDown(ConfigManager.keyBinds[KeyAction.Tasks])) Utils.ToggleTab();
-                if (PlayerControl.LocalPlayer.JLGGIOLCDFC != null && PlayerControl.LocalPlayer.JLGGIOLCDFC.DAPKNDBLKIA &&
+                if (PlayerControl.LocalPlayer.FKJEJKMBKDJ != null && PlayerControl.LocalPlayer.FKJEJKMBKDJ.MBJGOEANAPF &&
                     Input.GetKeyDown(ConfigManager.keyBinds[KeyAction.Kill]))
-                    DestroyableSingleton_HudManager_.GKNNCOKCCIC.KillButton.PerformKill();
+                    DestroyableSingleton<HudManager>.MHKLHAFLPJN.KillButton.PerformKill();
             }
         }
     }

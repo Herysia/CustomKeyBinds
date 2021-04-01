@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using CustomKeyBinds.Tools;
 using UnityEngine;
 
-using OptionsMenuBehaviour = BOMIGDLINBO;
-
 namespace CustomKeyBinds.Components
 {
     public class SettingsWindow : PopUpWindow
@@ -26,13 +24,14 @@ namespace CustomKeyBinds.Components
             separator.transform.parent = holder.transform;
             var start = new Vector3(0f, size.y / 2 * 0.75f, holder.transform.position.z - 21f);
             separator.transform.position = start;
+            /*
             var lr = separator.AddComponent<LineRenderer>();
             lr.material = new Material(Shader.Find("Unlit/ColoredVertices"));
             lr.SetColors(Color.white, Color.white);
             lr.SetWidth(0.05f, 0.05f);
             lr.SetPosition(0, start);
             lr.SetPosition(1, new Vector3(0f, -size.y / 2 * 0.9f, holder.transform.position.z - 21f));
-
+            */
             //Create child elements
             var i = 0;
             foreach (KeyAction action in Enum.GetValues(typeof(KeyAction)))

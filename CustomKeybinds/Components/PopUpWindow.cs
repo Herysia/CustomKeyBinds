@@ -6,9 +6,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
-using TextRenderer = AELDHKGBIFD;
-using OptionsMenuBehaviour = BOMIGDLINBO;
-using PassiveButton = HHMBANDDIOA;
 
 namespace CustomKeyBinds.Components
 {
