@@ -5,10 +5,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
-using PassiveButton = HHMBANDDIOA;
-using TextRenderer = AELDHKGBIFD;
-using OptionsMenuBehaviour = BOMIGDLINBO;
-
 namespace CustomKeyBinds.Components
 {
     public class OptionsMenuButton

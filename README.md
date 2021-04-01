@@ -10,7 +10,7 @@ Among us mod that allow you to set custom keybinds for common actions through an
 # Technical stuff
 This mod is using BepInEx for patching the game at runtime, it **DOES NOT** modify any game files.
 
-- Steam 2020.12.9s support ONLY (send me Itch obfuscated names if you want it)
+- Steam 2021.3.31s support ONLY (send me Itch obfuscated names if you want it)
 - Code with unobfuscated names is available in 2020.9.9s branch
 
 

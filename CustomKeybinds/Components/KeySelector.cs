@@ -4,8 +4,6 @@ using CustomKeyBinds.Tools;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-using TextRenderer = AELDHKGBIFD;
-using OptionsMenuBehaviour = BOMIGDLINBO;
 
 namespace CustomKeyBinds.Components
 {
@@ -149,7 +147,7 @@ namespace CustomKeyBinds.Components
         public static void HudUpdate()
         {
             Selectors.RemoveAll(item => item._holder == null);
-            if (_isSelecting != null && Input.anyKey) OnInput();
+            if (_isSelecting != null && Input.anyKeyDown) OnInput();
             foreach (var selector in Selectors) selector.Update();
         }
 
