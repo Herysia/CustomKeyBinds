@@ -5,7 +5,7 @@
     <ReferencePath>I:\Games\AmongUs_Modding\latest_unobf\BepInEx\unhollowed\;I:\Games\AmongUs_Modding\latest_unobf\BepInEx\core\</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <ReferencePath>I:\Games\AmongUs_Modding\2021.3.31s\BepInEx\unhollowed\;I:\Games\AmongUs_Modding\2021.3.31s\BepInEx\core\</ReferencePath>
+    <ReferencePath>I:\Games\AmongUs_Modding\latest\BepInEx\unhollowed\;I:\Games\AmongUs_Modding\latest\BepInEx\core\</ReferencePath>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>

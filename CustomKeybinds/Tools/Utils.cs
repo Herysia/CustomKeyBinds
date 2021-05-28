@@ -20,7 +20,7 @@ namespace CustomKeyBinds.Tools
 
         internal static void ToggleTab()
         {
-            var taskStuff = DestroyableSingleton<HudManager>.CMJOLNCMAPD?.TaskStuff;
+            var taskStuff = DestroyableSingleton<HudManager>.Instance?.TaskStuff;
 
             if (taskStuff == null || !taskStuff.active)
                 return;
