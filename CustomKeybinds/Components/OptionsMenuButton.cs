@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CustomKeyBinds.Tools;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -21,7 +22,7 @@ namespace CustomKeyBinds.Components
         public Vector2 pos;
         public Vector2 size;
         public string text;
-        public TextRenderer textComponent;
+        public TextMeshPro textComponent;
         public OptionsMenuButton(OptionsMenuBehaviour optionsMenu, string name, string text, Action action, Vector2 pos,
             GameObject parent = null) : this(optionsMenu, name, text, action, pos, new Vector2(2.0f, 0.4f), parent)
         {
@@ -48,7 +49,7 @@ namespace CustomKeyBinds.Components
 
         internal void SetLabel(string label)
         {
-            textComponent.Text = label;
+            textComponent.text = label;
         }
 
         public void OnOut()
@@ -66,8 +67,7 @@ namespace CustomKeyBinds.Components
             //Get original components
             var joyStickButtonComponent = Utils.GetChildComponentByName<Component>(optionsMenu, "JoystickModeButton");
             var oBackgroundComponent = Utils.GetChildComponentByName<Component>(joyStickButtonComponent, "Background");
-            var oTextComponent = Utils.GetChildComponentByName<TextRenderer>(joyStickButtonComponent, "Text");
-
+            var oTextComponent = Utils.GetChildComponentByName<TextMeshPro>(joyStickButtonComponent, "Text_TMP");//oBackgroundComponent.GetComponentInChildren<TextRenderer>();//Utils.GetChildComponentByName<TextRenderer>(joyStickButtonComponent, "Text_TMP");
             //Create component and add it to the parent
             holder = new GameObject(name);
 
@@ -101,7 +101,7 @@ namespace CustomKeyBinds.Components
             //Enable the button
             OnOut();
             holder.gameObject.SetActive(true);
-            textComponent.Text = text;
+            textComponent.text = text;
             holder.transform.localPosition = new Vector3(pos.x, pos.y);
         }
 

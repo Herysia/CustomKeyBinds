@@ -48,7 +48,7 @@ namespace CustomKeyBinds.Components
                     action.ToString(),
                     action.ToString(),
                     action,
-                    selectorPos,
+                    selectorPos + new Vector2(1.1f, -0.17f),
                     selectorPos + new Vector2(size.x / 3, 0f),
                     holder));
                 i++;

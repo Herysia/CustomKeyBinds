@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using CustomKeyBinds.Tools;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
@@ -16,9 +17,9 @@ namespace CustomKeyBinds.Components
 
         private Component _backgroundComponent;
         private Component _closeButton;
-        private Component _controlText;
+        private TextMeshPro _controlText;
 
-        private TextRenderer _textRenderer;
+        private TextMeshPro _textRenderer;
 
 
         protected GameObject holder;
@@ -45,7 +46,7 @@ namespace CustomKeyBinds.Components
             //Get original components
             var oBackgroundComponent = Utils.GetChildComponentByName<Component>(optionsMenu, "Background");
             var oCloseButton = Utils.GetChildComponentByName<Component>(optionsMenu, "CloseButton");
-            var oControlText = Utils.GetChildComponentByName<Component>(optionsMenu, "ControlText");
+            var oControlText = Utils.GetChildComponentByName<TextMeshPro>(optionsMenu, "ControlText_TMP");
 
             //Create component and add it to the parent
             holder = new GameObject(name);
@@ -85,8 +86,9 @@ namespace CustomKeyBinds.Components
             }
 
             //Configure title title
-            _textRenderer = _controlText.gameObject.GetComponent<TextRenderer>();
-            _textRenderer.Centered = true;
+            _textRenderer = _controlText.gameObject.GetComponent<TextMeshPro>();
+            //_textRenderer.Centered = true;
+            _textRenderer.alignment = TextAlignmentOptions.Center;
             _controlText.transform.localPosition = new Vector3( /*-(size.x / 2) * 0.90f */ 0f, size.y / 2 * 0.92f);
 
 
@@ -124,7 +126,7 @@ namespace CustomKeyBinds.Components
 
         private void Update()
         {
-            _textRenderer.Text = title;
+            _textRenderer.text = title;
         }
     }
 }

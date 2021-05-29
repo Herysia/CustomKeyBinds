@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CustomKeyBinds.Tools;
+using TMPro;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -22,7 +23,7 @@ namespace CustomKeyBinds.Components
         private GameObject _holder;
         private Component _label;
 
-        private TextRenderer _textRenderer;
+        private TextMeshPro _textRenderer;
         public Vector2 buttonPos;
         public KeyAction key;
         public string label;
@@ -49,7 +50,7 @@ namespace CustomKeyBinds.Components
         {
             //Get original components
             var oControlGroup = Utils.GetChildComponentByName<Component>(optionsMenu, "ControlGroup");
-            var oControlText = Utils.GetChildComponentByName<Component>(oControlGroup, "ControlText");
+            var oControlText = Utils.GetChildComponentByName<TextMeshPro>(oControlGroup, "ControlText_TMP");
             var oIgnoreClose = Utils.GetChildComponentByName<Component>(optionsMenu, "IgnoreClose");
             if (oIgnoreClose == null)
             {
@@ -72,7 +73,7 @@ namespace CustomKeyBinds.Components
             _ignoreClose = Object.Instantiate(oIgnoreClose, _holder.transform);
 
             //Configure label
-            _textRenderer = _label.gameObject.GetComponent<TextRenderer>();
+            _textRenderer = _label.gameObject.GetComponent<TextMeshPro>();
             _label.transform.localPosition = new Vector3(labelPos.x, labelPos.y);
 
             //Create button
@@ -153,7 +154,7 @@ namespace CustomKeyBinds.Components
 
         private void Update()
         { 
-            _textRenderer.Text = label;
+            _textRenderer.text = label;
         }
     }
 }

@@ -80,6 +80,10 @@
     <Reference Include="UnhollowerBaseLib">
       <HintPath>UnhollowerBaseLib.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>UnityEngine.dll</HintPath>
     </Reference>
@@ -112,6 +116,8 @@
     <Compile Include="Patches\OptionsMenuPatches.cs" />
     <Compile Include="Tools\Utils.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Unity.TextMeshPro.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
